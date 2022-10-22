@@ -1,0 +1,17 @@
+@use './styles' as *;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+.app {
+  background: url(./assets/bg-mobile-dark.jpg), $clr-very-dark-blue;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  font-family: $ff-primary;
+  font-size: $fs-primary;
+
+  @include breakpoint(small) {
+    background: url(./assets/bg-desktop-dark.jpg), $clr-very-dark-blue;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

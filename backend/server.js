@@ -1,16 +1,16 @@
 // imports
-import express from 'express'
-import dotenv from "dotenv"
-dotenv.config()
+import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
 
 // app config
-const app = express()
-const port = process.env.PORT || 5000
+const app = express();
+const port = process.env.PORT || 5000;
 
-// middlewares 
+// middlewares
 
 app.use(express.json());
-app.use(express.urlencoded({extended: true, limit: '5mb'}))
+app.use(express.urlencoded({ extended: true, limit: '5mb' }));
 
 // db config
 
@@ -18,4 +18,4 @@ app.use(express.urlencoded({extended: true, limit: '5mb'}))
 
 // app listener
 
-app.listen(port, () => console.log(`Listening on port ${port}`))
+app.listen(port, () => console.log(`Listening on port ${port}`));
