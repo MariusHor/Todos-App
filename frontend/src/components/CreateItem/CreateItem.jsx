@@ -7,7 +7,14 @@ const CreateItem = () => {
   return (
     <form className='createItem'>
       <label htmlFor='addItem'></label>
-      <input type='text' required id='addItem' placeholder='Create a new todo...' autoFocus />
+      <input
+        type='text'
+        required
+        id='addItem'
+        placeholder='Create a new todo...'
+        autoFocus
+        autoComplete='off'
+      />
       <button className='createItem__submit' type='submit' aria-label='add new todo'>
         <FaPlus />
       </button>

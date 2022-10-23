@@ -1,0 +1,44 @@
+@use '../../styles' as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: $clr-dark-desaturated-blue;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  margin-top: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  color: #fff;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font-size: 12px;
+    color: $clr-light-grayish-blue;
+
+    li {
+      border-bottom: solid 1px $clr-very-dark-grayish-blue;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: $clr-very-dark-grayish-blue;
+    font-size: 13px;
+    padding: 1rem;
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
