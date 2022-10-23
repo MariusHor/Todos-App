@@ -1,0 +1,16 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+body {
+  background: url(../assets/bg-mobile-dark.jpg), $clr-very-dark-blue;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: $ff-primary;
+  font-size: $fs-primary;
+
+  @include breakpoint(small) {
+    background: url(../assets/bg-desktop-dark.jpg), $clr-very-dark-blue;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

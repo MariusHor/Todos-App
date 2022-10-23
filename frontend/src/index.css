@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  min-width: min-content;
 }
 
 *,
@@ -19,7 +20,6 @@ body {
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
 }
 
 ul,
