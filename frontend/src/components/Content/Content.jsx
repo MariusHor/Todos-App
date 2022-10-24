@@ -1,33 +1,23 @@
-import React from 'react';
 /* eslint react/prop-types: 0 */
+import React from 'react';
 
 import './Content.scss';
+import Todo from '../Todo/Todo';
 
-const Content = () => {
-  const items = [
-    {
-      title: 'Another todo',
-      id: 1,
-    },
-    {
-      title: 'Old todo',
-      id: 2,
-    },
-  ];
-
+const Content = ({ todos }) => {
   return (
     <div className='content'>
-      {!items ? (
+      {!todos ? (
         <p>Please add a new Todo!</p>
       ) : (
         <ul className='content__list'>
-          {items.map(item => (
-            <li key={item.id}>{item.title}</li>
+          {todos.map(todo => (
+            <Todo key={todo._id} todo={todo} checked={todo.checked} />
           ))}
         </ul>
       )}
       <div className='content__bottom'>
-        <p>0 items left</p>
+        <p>{`${todos.length}`} items</p>
         <button>Clear Completed</button>
       </div>
     </div>
