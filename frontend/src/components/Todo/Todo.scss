@@ -1,0 +1,54 @@
+@use '../../styles' as *;
+
+.todo {
+  width: 100%;
+  flex-wrap: wrap;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-bottom: solid 1px $clr-very-dark-grayish-blue;
+
+  input {
+    height: 25px;
+    width: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid #34495e;
+    border-radius: 50%;
+    outline: none;
+    transition-duration: 0.3s;
+    background-color: $clr-dark-desaturated-blue;
+    cursor: pointer;
+  }
+
+  input:checked {
+    background-color: hsl(280, 87%, 65%);
+  }
+
+  input[type='checkbox']:focus + label {
+    text-decoration: underline;
+  }
+
+  svg {
+    width: 1.5rem;
+    font-size: 1rem;
+    color: hsl(280, 87%, 65%);
+    cursor: pointer;
+  }
+
+  svg:focus,
+  svg:hover {
+    color: $clr-dark-grayish-blue;
+    outline: none;
+  }
+
+  .todo > label {
+    font-size: 1rem;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
